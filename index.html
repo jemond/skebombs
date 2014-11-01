@@ -1,0 +1,77 @@
+<html>
+<head>
+  <title>Holy shit John and Sarah are getting married!</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="/screen.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="TweenLite.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    if ($(window).width() < 481) {
+      return;
+    }
+
+    // Bling bling.
+    $(window).bind('mousemove', function() {
+      $('body').css({cursor:"url(engagement-ring.jpg), auto"});
+    });
+
+    // Love waterfall.
+    var $rose = $('.rose');
+    var height = $(window).height();
+    for (var i = 0; i < 350; i++) {
+      var rando = Math.random() * ($(window).width());
+      var speed = Math.random() * (3500 - 1000) + 3500;
+      var top = -1 * (Math.random() * (400 - 0) + 400);
+      $rose.clone().prependTo('body').show().css({left: rando + 'px', top: top + 'px'}).animate({top: height + 'px'}, speed);
+    }
+  });
+  </script>
+
+</head>
+<body class="home-page">
+
+  <header>
+    <a class="site-name" href="/">Sarah &amp; John Get Married</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/photos">Photos</a>
+      <a href="/map">Map</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Holy shit John and Sarah are getting married!</h1>
+  </div>
+
+  <main>
+
+    <h2>When, Where</h2>
+
+    <p>January 3, 2015 from 3 to 8pm at the <a href="http://www.endicottestate.com/">Endicott Estate</a> (<a href="http://www.endicottestate.com/index.cfm?cdid=10279">directions</a> and <a href="/map">area map</a>). A brief ceremony at 3 will be followed by a reception at the estate.</p>
+
+    <h2>Nearby Hotels</h2>
+
+    <ul>
+      <li><a href="http://www.fourpointsnorwood.com/">Four Points Sheraton</a>, Norwood</li>
+      <li><a href="http://www.ihg.com/holidayinn/hotels/us/en/dedham/bosdh/hoteldetail">Holiday Inn</a>, Dedham</li>
+      <li><a href="http://www.marriott.com/hotels/travel/bosbw-residence-inn-boston-norwood-canton/">Residence Inn</a>, Canton</li>
+      <li><a href="http://hamptoninn3.hilton.com/en/hotels/massachusetts/hampton-inn-boston-norwood-BOSNWHX/index.html">Hampton Inn</a>, Norwood</li>
+    </ul>
+
+    <h2>Gifts</h2>
+
+    <p>The bride and groom respectively request you refrain from gifts.</p>
+
+  </main>
+
+  <div class="rose"></div>
+
+<!-- Wedding websites are ridiculous but I love you so here you go sis. -->
+
+</body>
+</html>
