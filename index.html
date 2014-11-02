@@ -24,6 +24,10 @@
     var height = $(window).height();
     for (var i = 0; i < 350; i++) {
       var rando = Math.random() * ($(window).width());
+      // Ensure none go off the page to the right.
+      if (rando + 30 > $(window).width()) {
+        rando = 0;
+      }
       var speed = Math.random() * (3500 - 1000) + 3500;
       var top = -1 * (Math.random() * (400 - 0) + 400);
       $rose.clone().prependTo('body').show().css({left: rando + 'px', top: top + 'px'}).animate({top: height + 'px'}, speed);
@@ -70,7 +74,7 @@
 
   <div class="rose"></div>
 
-<!-- Wedding websites are ridiculous but I love you so here you go sis. -->
+  <!-- Wedding websites are ridiculous but I love you so here you go sis. -->
 
 </body>
 </html>
