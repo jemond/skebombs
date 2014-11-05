@@ -68,16 +68,6 @@ header nav a {
   padding-top: 8px;
 }
 
-.rose {
-  background-image: url(rose-petal.jpg);
-  background-repeat: no-repeat;
-  display: none;
-  position: absolute;
-  top: -40px;
-  height: 24px;
-  width: 30px;
-}
-
 .photo {
   max-width: 100%;
 }
