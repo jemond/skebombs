@@ -76,10 +76,6 @@ header nav a {
   text-align: center;
 }
 
-.home-page main p {
-  max-width: 500px;
-}
-
 .map {
   min-height: 240px;
   width: 100%;
@@ -91,6 +87,10 @@ header nav a {
     margin: auto;
     padding-top: 120px;
     max-width: 960px;
+  }
+
+  .home-page main p {
+    max-width: 600px;
   }
 
   .span-1 {
